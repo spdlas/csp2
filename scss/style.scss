@@ -1,0 +1,218 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+@import "./fonts";
+
+@mixin flex-center($gap: 16px, $justify: center, $align: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+$bgBtnColor: #ff3e79;
+$bgWhite: #fff;
+$bgGrey: #f8f8f8;
+$dividerColor: #eaeaea;
+$highlightColor: #b8ffec;
+
+body {
+  background-color: $bgGrey;
+  font-family: "TT Lakes", sans-serif;
+}
+
+.mobile-nav {
+  @include flex-center($justify: space-between);
+  padding: 16px;
+  background-color: $bgWhite;
+
+  ul {
+    @include flex-center;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  &__item {
+    @include flex-center;
+
+    ul:nth-child(2)::before {
+      content: "";
+      display: inline-block;
+      width: 2px;
+      height: 32px;
+      background-color: $dividerColor;
+    }
+  }
+}
+
+.read-next {
+  @include flex-center($gap: 8px);
+
+  img {
+    max-width: 40px;
+  }
+}
+
+.button-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $bgBtnColor;
+  @include flex-center;
+}
+
+.about-company {
+  @include flex-center($align: flex-start);
+
+  img {
+    max-width: 530px;
+    max-height: 307px;
+  }
+
+  .read-next {
+    justify-content: flex-start;
+    text-align: left;
+    gap: 8px;
+  }
+
+  figcaption {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+  }
+
+  &__title {
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    text-align: left;
+  }
+}
+
+.active {
+  border: 2px solid $highlightColor;
+  border-radius: 5px;
+  background-color: $bgWhite;
+}
+
+.page-menu {
+  padding-top: 16px;
+  padding-right: 16px;
+  &__header {
+    @include flex-center($justify: space-between);
+
+    h1 {
+      @include flex-center($gap: 16px);
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 40px;
+        border-radius: 0 5px 5px 0;
+        background-color: $highlightColor;
+      }
+    }
+
+    ul {
+      @include flex-center($gap: 16px);
+
+      li {
+        @include flex-center($gap: 16px);
+      }
+    }
+  }
+
+  &__menu-list {
+    max-width: 100vw;
+    overflow-y: hidden;
+
+    ul {
+      @include flex-center($gap: 0px, $justify: flex-start);
+      list-style: none;
+      overflow: hidden;
+      padding-left: 16px;
+
+      li {
+        white-space: nowrap;
+        min-width: 248px;
+        height: 40px;
+        @include flex-center;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .mobile-nav__item ul:nth-child(1) {
+    display: none;
+  }
+
+  .page-menu__header {
+    display: none;
+  }
+
+  .about-company {
+    flex-direction: column;
+
+    img {
+      max-width: 320px;
+      max-height: 208px;
+    }
+
+    &__title {
+      max-height: 90px;
+    }
+
+    figcaption {
+      padding: 16px;
+    }
+  }
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+  .about-company {
+    padding: 16px;
+    flex-direction: row;
+
+    img {
+      max-width: 360px;
+      max-height: 208px;
+    }
+
+    &__title {
+      max-height: 160px;
+    }
+  }
+
+  .page-menu__header {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .about-company {
+    padding: 16px;
+  }
+  .page-menu__menu-list {
+    ul {
+      flex-wrap: wrap;
+    }
+  }
+}
