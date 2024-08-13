@@ -85,7 +85,6 @@ li {
   padding-left: 16px;
   overflow-y: scroll;
   scrollbar-width: 0;
-  overflow-x: hidden;
 }
 .nav-desktop a {
   text-decoration: none;
@@ -195,7 +194,6 @@ li {
     padding: 16px;
   }
   .nav-desktop {
-    max-width: 1064px;
     flex-wrap: wrap;
   }
 }
