@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CPS</title>
+    <title>cps</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -11,94 +11,92 @@
       <nav class="mobile-nav">
         <ul>
           <li>
-            <div class="button-circle">
-              <img src="img/icon_01.svg" alt="" />
-            </div>
+            <button class="button-circle">
+              <img src="img/icon_menu.svg" alt="" />
+            </button>
           </li>
-          <li>
-            <div class="logo"><img src="img/logo.svg" alt="" /></div>
+          <li class="logo">
+            <img src="img/logo.svg" alt="" />
           </li>
         </ul>
-        <div class="mobile-nav__item">
-          <ul>
-            <li>
-              <div class="button-circle">
-                <img src="img/icon_04.svg" alt="" />
-              </div>
-            </li>
-            <li>
-              <div class="button-circle">
-                <img src="img/icon_05.svg" alt="" />
-              </div>
-            </li>
-            <li>
-              <div class="button-circle">
-                <img src="img/icon_06.svg" alt="" />
-              </div>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <div class="button-circle">
-                <img src="img/icon_02.svg" alt="" />
-              </div>
-            </li>
-            <li>
-              <div class="button-circle">
-                <img src="img/icon_03.svg" alt="" />
-              </div>
-            </li>
-          </ul>
-        </div>
+        <ul>
+          <li>
+            <button class="button-circle">
+              <img src="img/icon_call.svg" alt="" />
+            </button>
+          </li>
+          <li>
+            <button class="button-circle">
+              <img src="img/icon_ask.svg" alt="" />
+            </button>
+          </li>
+          <li>
+            <button class="button-circle">
+              <img src="img/icon_people.svg" alt="" />
+            </button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <button class="button-circle">
+              <img src="img/icon_repair.svg" alt="" />
+            </button>
+          </li>
+          <li>
+            <button class="button-circle">
+              <img src="img/icon_search.svg" alt="" />
+            </button>
+          </li>
+        </ul>
       </nav>
-      <nav class="page-menu">
-        <div class="page-menu__header">
-          <h1>Услуги и сервисы</h1>
-          <ul>
-            <li>
+      <div class="page-menu">
+        <h1>Услуги и сервисы</h1>
+        <ul>
+          <li>
+            <button>
               Оставить заявку
               <div class="button-circle">
-                <img src="img/icon_02.svg" alt="" />
+                <img src="img/icon_repair.svg" alt="" />
               </div>
-            </li>
-            <li>
+            </button>
+          </li>
+          <li>
+            <button>
               Статус ремонта
               <div class="button-circle">
-                <img src="img/icon_03.svg" alt="" />
+                <img src="img/icon_repair.svg" alt="" />
               </div>
-            </li>
-          </ul>
-        </div>
-        <div class="page-menu__menu-list">
-          <ul>
-            <li class="active">Ремонтируемые бренды</li>
-            <li>Ремонтируемые устройства</li>
-            <li>Цена на услуги</li>
-            <li>Адреса сервисных центров</li>
-            <li>Специальные цены</li>
-            <li>Отзывы</li>
-          </ul>
-        </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <nav div class="nav-desktop">
+        <a href="" class="nav-desktop__item">Ремонтируемые устройства</a>
+        <a href="" class="nav-desktop__item">Дополнительные услуги</a>
+        <a href="" class="nav-desktop__item">Цены на услуги</a>
+        <a href="" class="nav-desktop__item">Адреса сервисных центров</a>
+        <a href="" class="nav-desktop__item">Специальные цены</a>
+        <a href="" class="nav-desktop__item">Отзывы</a>
       </nav>
-      <figure class="about-company">
-        <figcaption>
-          <div class="about-company__title">
+      <section class="about">
+        <div>
+          <div class="about__title">
             Мы являемся авторизованным сервисным центром по ремонту техники
             Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-            официальной гарантией производителя.
-            <br /><br />
-            Мы успешно работаем с 1992 года и заслужили репутацию надежного
+            официальной гарантией производителя. <br /><br />
+            <!-- Prettier не дает сделать при помощи css white-space:pre-wrap -->
+            Мы успешно работаем с 1992 годаи заслужили репутацию надежного
             партнера, что подтверждает большое количество постоянных клиентов.
             Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
             очередь, советуют нас родным и близким.
           </div>
-          <div class="read-next">
-            <img src="img/read-next.svg" alt="" />
-            <div>Читать далее</div>
-          </div>
-        </figcaption>
-        <img src="img/company.png" alt="" />
-      </figure>
+          <button>
+            <img src="img/read-next.svg" alt="Кнопка читать далее" />
+            Читать далее
+          </button>
+        </div>
+        <img src="img/company.png" alt="Фотография входа в офис" />
+      </section>
     </div>
   </body>
 </html>
