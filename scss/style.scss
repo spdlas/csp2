@@ -35,6 +35,9 @@ button {
 li {
   list-style: none;
 }
+a {
+  text-decoration: none;
+}
 
 .main {
   display: flex;
@@ -57,9 +60,14 @@ li {
   content: "";
 }
 
-.mobile-nav {
+.logo:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.nav-mobile {
   background-color: $bgColorWhite;
-  @include display-flex($gap: 16px, $justify: flex-start);
+  @include display-flex($gap: 16px, $justify: space-between);
   padding: 16px;
   ul {
     @include display-flex($gap: 16px, $justify: center);
@@ -82,14 +90,18 @@ li {
   background-color: $bgButtonCircle;
 }
 
-.nav-desktop {
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 16px;
-  overflow-y: scroll;
-  scrollbar-width: 0;
+.nav-header {
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 16px;
+    overflow-y: scroll;
+    align-items: center;
+    li {
+      @include display-flex($align: center, $justify: center);
+    }
+  }
   a {
-    text-decoration: none;
     padding: 8px;
     border: solid 2px #ffffff00;
     border-radius: 6px;
@@ -100,6 +112,7 @@ li {
     box-sizing: border-box;
     box-sizing: inherit;
     background-color: white;
+    padding: 8px;
   }
 }
 
@@ -149,7 +162,7 @@ li {
     text-align: left;
 
     img {
-      padding: 0;
+      padding: 0px;
     }
   }
   img {
@@ -157,8 +170,12 @@ li {
   }
 }
 
+.button-text {
+  @include display-flex($align: center, $justify: space-between, $gap: 16px);
+}
+
 @media (min-width: 768px) {
-  .mobile-nav {
+  .nav-mobile {
     justify-content: space-between;
     ul:nth-child(2) {
       display: flex;
@@ -186,13 +203,15 @@ li {
       padding: 16px;
     }
   }
-  .nav-desktop {
-    flex-wrap: wrap;
+  .nav-header {
+    &__list {
+      flex-wrap: wrap;
+    }
   }
 }
 
 @media (min-width: 1440px) {
-  .mobile-nav {
+  .nav-mobile {
     display: none;
   }
   .page-menu {
@@ -204,17 +223,10 @@ li {
       gap: 16px;
     }
     li {
-      button {
-        @include display-flex(
-          $align: center,
-          $justify: space-between,
-          $gap: 16px
-        );
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.2px;
-        text-align: left;
-      }
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      text-align: left;
     }
   }
   .about {

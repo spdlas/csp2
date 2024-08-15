@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="main">
-      <nav class="mobile-nav">
+      <nav class="nav-mobile">
         <ul>
           <li>
             <button class="button-circle">
@@ -49,34 +49,50 @@
           </li>
         </ul>
       </nav>
-      <div class="page-menu">
-        <h1>Услуги и сервисы</h1>
-        <ul>
+      <section>
+        <div class="page-menu">
+          <h1>Услуги и сервисы</h1>
+          <ul>
+            <li>
+              <button class="button-text">
+                Оставить заявку
+                <div class="button-circle">
+                  <img src="img/icon_repair.svg" alt="" />
+                </div>
+              </button>
+            </li>
+            <li>
+              <button class="button-text">
+                Статус ремонта
+                <div class="button-circle">
+                  <img src="img/icon_repair.svg" alt="" />
+                </div>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <nav class="nav-header">
+        <ul class="nav-header__list">
           <li>
-            <button>
-              Оставить заявку
-              <div class="button-circle">
-                <img src="img/icon_repair.svg" alt="" />
-              </div>
-            </button>
+            <a href="">Ремонтируемые устройства</a>
           </li>
           <li>
-            <button>
-              Статус ремонта
-              <div class="button-circle">
-                <img src="img/icon_repair.svg" alt="" />
-              </div>
-            </button>
+            <a href="">Дополнительные услуги</a>
+          </li>
+          <li>
+            <a href="">Цены на услуги</a>
+          </li>
+          <li>
+            <a href="">Адреса сервисных центров</a>
+          </li>
+          <li>
+            <a href="">Специальные цены</a>
+          </li>
+          <li>
+            <a href="">Отзывы</a>
           </li>
         </ul>
-      </div>
-      <nav div class="nav-desktop">
-        <a href="" class="nav-desktop__item">Ремонтируемые устройства</a>
-        <a href="" class="nav-desktop__item">Дополнительные услуги</a>
-        <a href="" class="nav-desktop__item">Цены на услуги</a>
-        <a href="" class="nav-desktop__item">Адреса сервисных центров</a>
-        <a href="" class="nav-desktop__item">Специальные цены</a>
-        <a href="" class="nav-desktop__item">Отзывы</a>
       </nav>
       <section class="about">
         <div>
@@ -90,7 +106,7 @@
             Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
             очередь, советуют нас родным и близким.
           </div>
-          <button>
+          <button class="button-text">
             <img src="img/read-next.svg" alt="Кнопка читать далее" />
             Читать далее
           </button>
