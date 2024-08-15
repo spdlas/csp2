@@ -138,6 +138,19 @@ a {
   display: none;
 }
 
+.read-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  align-self: flex-start;
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-align: left;
+}
+
 .about {
   display: flex;
   gap: 8px;
@@ -151,21 +164,6 @@ a {
   line-height: 20px;
   letter-spacing: 0.2px;
   text-align: left;
-}
-.about button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  align-self: flex-start;
-  padding-left: 16px;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  text-align: left;
-}
-.about button img {
-  padding: 0px;
 }
 .about img {
   max-width: 100vw;
