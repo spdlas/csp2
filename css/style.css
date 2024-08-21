@@ -214,6 +214,9 @@ a {
   .nav-mobile .logo::after {
     display: none;
   }
+  .nav-header__list {
+    overflow: hidden;
+  }
   .about {
     flex-direction: row;
   }
