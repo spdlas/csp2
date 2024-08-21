@@ -4,6 +4,7 @@
   src: url("./font/TTLakes-Regular.eot"); /* Для Internet Explorer 9 и ниже */
   src: url("./font/TTLakes-Regular.eot?#iefix") format("embedded-opentype"), url("./font/TTLakes-Regular.woff") format("woff"), "./font/TTLakes-Regular.ttf";
 }
+/* Сброс*/
 html {
   box-sizing: border-box;
 }
@@ -35,6 +36,7 @@ a {
   text-decoration: none;
 }
 
+/* ----------------------------- */
 .main {
   display: flex;
   flex-direction: column;
@@ -57,13 +59,13 @@ a {
   gap: 16px;
   padding: 16px;
 }
-.nav-mobile ul {
+.nav-mobile__list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
 }
-.nav-mobile ul:nth-child(2) {
+.nav-mobile__list:nth-child(2) {
   display: none;
 }
 .nav-mobile .logo::after {
@@ -101,20 +103,21 @@ a {
   padding-left: 16px;
   overflow-y: scroll;
   align-items: center;
+  height: 40px;
 }
-.nav-header__list li {
+.nav-header__list__item {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0px;
 }
-.nav-header a {
+.nav-header__link {
   padding: 8px;
   border: solid 2px rgba(255, 255, 255, 0);
   border-radius: 6px;
   white-space: pre;
 }
-.nav-header a:hover {
+.nav-header__link:hover {
   border-color: #b8ffec;
   box-sizing: border-box;
   box-sizing: inherit;
@@ -141,7 +144,7 @@ a {
   border-radius: 0 5px 5px 0;
   background-color: #41f6d7;
 }
-.page-menu ul {
+.page-menu__list {
   display: none;
 }
 
@@ -191,11 +194,11 @@ a {
   .nav-mobile {
     justify-content: space-between;
   }
-  .nav-mobile ul:nth-child(2) {
+  .nav-mobile__list:nth-child(2) {
     display: flex;
     margin-left: auto;
   }
-  .nav-mobile ul:nth-child(2)::after {
+  .nav-mobile__list:nth-child(2)::after {
     display: flex;
     margin-left: auto;
     width: 2px;
@@ -226,6 +229,7 @@ a {
   }
   .nav-header__list {
     flex-wrap: wrap;
+    overflow: hidden;
   }
 }
 @media (min-width: 1440px) {
@@ -240,11 +244,11 @@ a {
     justify-content: space-between;
     gap: 0px;
   }
-  .page-menu ul {
+  .page-menu__list {
     display: flex;
     gap: 16px;
   }
-  .page-menu li {
+  .page-menu__item {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
