@@ -39,6 +39,9 @@ a {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo:hover {
