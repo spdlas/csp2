@@ -90,6 +90,10 @@ a {
   background-color: $bgButtonCircle;
 }
 
+.button-circle:hover {
+  opacity: 0.8;
+}
+
 .nav-header {
   &__list {
     display: flex;
@@ -146,6 +150,9 @@ a {
   line-height: 24px;
   letter-spacing: -0.2px;
   text-align: left;
+}
+.read-text:hover {
+  opacity: 0.8;
 }
 
 .about {

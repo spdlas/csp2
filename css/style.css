@@ -88,6 +88,10 @@ a {
   background-color: #ff3e79;
 }
 
+.button-circle:hover {
+  opacity: 0.8;
+}
+
 .nav-header__list {
   display: flex;
   justify-content: flex-start;
@@ -149,6 +153,10 @@ a {
   line-height: 24px;
   letter-spacing: -0.2px;
   text-align: left;
+}
+
+.read-text:hover {
+  opacity: 0.8;
 }
 
 .about {
