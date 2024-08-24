@@ -1,1 +1,1 @@
-(https://spdlas.github.io/csp2/)
+(https://spdlas.github.io/csp2/sideindex)
