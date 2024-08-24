@@ -76,10 +76,13 @@ a {
   &__list {
     @include display-flex($gap: 16px, $justify: center);
   }
-  &__list:nth-child(2) {
+  .nav-list-contact {
     display: none;
   }
-  .logo::after {
+  .nav-list-search {
+    @include display-flex($gap: 16px, $justify: center);
+  }
+  .nav-list-search .logo::after {
     @include line-gray;
   }
   .logo {
@@ -103,9 +106,10 @@ a {
     display: flex;
     justify-content: flex-start;
     padding-left: 16px;
-    overflow-y: scroll;
+    overflow-x: scroll;
     align-items: center;
     height: 40px;
+    overflow-y: hidden;
     &__item {
       @include display-flex($align: center, $justify: center);
     }
@@ -182,15 +186,86 @@ a {
 .button-text {
   @include display-flex($align: center, $justify: space-between, $gap: 16px);
 }
+.lang-switch-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition-duration: 1s;
+}
+.side-box {
+  max-width: 320px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: 0 5px 20px #0e185033;
+  .nav-side {
+    @include display-flex($align: center, $justify: space-between, $gap: 16px);
+    padding: 16px;
+  }
+  .nav-header {
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    &__list {
+      max-width: 320px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      height: 100%;
+      padding: 0;
+    }
+    &__link:hover::before {
+      content: "";
+      display: inline-block;
+      width: 3px;
+      height: 40px;
+      border-radius: 0 5px 5px 0;
+      background-color: #41f6d7;
+    }
+    &__link:hover {
+      border: none;
+      background-color: #ffffff00;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      gap: 8px;
+      color: $textColorGray;
+    }
+  }
+  .nav-list-contact {
+    display: flex;
+    gap: 8px;
+  }
+  .nav-header__item {
+    display: flex;
+    flex-direction: column;
+  }
+  .side-bot {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 16px;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &__phone {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}
 
 @media (min-width: 768px) {
   .nav-mobile {
     justify-content: space-between;
-    &__list:nth-child(2) {
-      display: flex;
+    .nav-list-contact {
+      @include display-flex($gap: 16px, $justify: center);
       margin-left: auto;
     }
-    &__list:nth-child(2)::after {
+    .nav-list-contact::after {
       display: flex;
       margin-left: auto;
       @include line-gray;
@@ -215,7 +290,7 @@ a {
   .nav-header {
     &__list {
       flex-wrap: wrap;
-      overflow: hidden;
+      overflow-x: hidden;
     }
   }
 }
