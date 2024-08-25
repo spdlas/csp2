@@ -103,6 +103,7 @@ a {
 
 .nav-header {
   &__list {
+    color: black;
     display: flex;
     justify-content: flex-start;
     padding-left: 16px;
@@ -186,10 +187,14 @@ a {
 .button-text {
   @include display-flex($align: center, $justify: space-between, $gap: 16px);
 }
-.lang-switch-button:hover {
-  cursor: pointer;
-  opacity: 0.6;
-  transition-duration: 1s;
+.lang-switch {
+  display: flex;
+  gap: 8px;
+  &__button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transition-duration: 1s;
+  }
 }
 .side-box {
   max-width: 320px;
@@ -199,6 +204,7 @@ a {
   justify-content: space-between;
   gap: 32px;
   box-shadow: 0 5px 20px #0e185033;
+  overflow-y: auto;
   .nav-side {
     @include display-flex($align: center, $justify: space-between, $gap: 16px);
     padding: 16px;
@@ -251,9 +257,16 @@ a {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    font-style: normal;
     &__phone {
       font-size: 24px;
       font-weight: bold;
+    }
+    &__phone:hover {
+      opacity: 0.8;
+    }
+    &__mail:hover {
+      opacity: 0.8;
     }
   }
 }
@@ -293,11 +306,17 @@ a {
       overflow-x: hidden;
     }
   }
+  .side-box {
+    height: 100vh;
+  }
 }
 
 @media (min-width: 1440px) {
   .nav-mobile {
     display: none;
+  }
+  .side-box {
+    height: 100vh;
   }
   .page-menu {
     padding-top: 42px;
