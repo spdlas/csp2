@@ -38,6 +38,7 @@ li {
 a {
   text-decoration: none;
 }
+
 /* ----------------------------- */
 
 .main {
@@ -238,6 +239,9 @@ a {
       gap: 8px;
       color: $textColorGray;
     }
+    &__link:visited {
+      color: black;
+    }
   }
   .nav-list-contact {
     display: flex;
@@ -258,9 +262,14 @@ a {
     flex-direction: column;
     gap: 8px;
     font-style: normal;
+
     &__phone {
       font-size: 24px;
       font-weight: bold;
+      color: black;
+    }
+    &__mail {
+      color: black;
     }
     &__phone:hover {
       opacity: 0.8;

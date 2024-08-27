@@ -255,6 +255,9 @@ a {
   gap: 8px;
   color: #7e7e82;
 }
+.side-box .nav-header__link:visited {
+  color: black;
+}
 .side-box .nav-list-contact {
   display: flex;
   gap: 8px;
@@ -278,6 +281,10 @@ a {
 .side-box .contact-info__phone {
   font-size: 24px;
   font-weight: bold;
+  color: black;
+}
+.side-box .contact-info__mail {
+  color: black;
 }
 .side-box .contact-info__phone:hover {
   opacity: 0.8;
