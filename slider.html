@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cps</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="swiper-item__logo">
+            <img src="img/logo_lenovo.svg" alt="" />
+          </div>
+          <button class="button-swiper">
+            <img src="img/button_swiper.svg" alt="" />
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-item__logo">
+            <img src="img/logo_acer.svg" alt="" />
+          </div>
+          <button class="button-swiper">
+            <img src="img/button_swiper.svg" alt="" />
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-item__logo">
+            <img src="img/logo_apple.svg" alt="" />
+          </div>
+          <button class="button-swiper">
+            <img src="img/button_swiper.svg" alt="" />
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-item__logo">
+            <img src="img/logo_bosh.svg" alt="" />
+          </div>
+          <button class="button-swiper">
+            <img src="img/button_swiper.svg" alt="" />
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-item__logo">
+            <img src="img/logo_lenovo.svg" alt="" />
+          </div>
+          <button class="button-swiper">
+            <img src="img/button_swiper.svg" alt="" />
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-item__logo">
+            <img src="img/logo_lenovo.svg" alt="" />
+          </div>
+          <button class="button-swiper">
+            <img src="img/button_swiper.svg" alt="" />
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-item__logo">
+            <img src="img/logo_lenovo.svg" alt="" />
+          </div>
+          <button class="button-swiper">
+            <img src="img/button_swiper.svg" alt="" />
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-item__logo">
+            <img src="img/logo_lenovo.svg" alt="" />
+          </div>
+          <button class="button-swiper">
+            <img src="img/button_swiper.svg" alt="" />
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-item__logo">
+            <img src="img/logo_lenovo.svg" alt="" />
+          </div>
+          <button class="button-swiper">
+            <img src="img/button_swiper.svg" alt="" />
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-item__logo">
+            <img src="img/logo_lenovo.svg" alt="" />
+          </div>
+          <button class="button-swiper">
+            <img src="img/button_swiper.svg" alt="" />
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-item__logo">
+            <img src="img/logo_lenovo.svg" alt="" />
+          </div>
+          <button class="button-swiper">
+            <img src="img/button_swiper.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <button class="read-text" id="openSlider">
+      <img
+        class="read-text__image"
+        src="img/read-next.svg"
+        alt="Кнопка читать далее"
+      />
+      <div class="read-text__title">Показать все</div>
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      if (window.innerWidth <= 768) {
+      } else {
+        //не выполнять
+      }
+    </script>
+    <script>
+      window.addEventListener("resize", function () {
+        if (window.matchMedia("(max-width: 768px)").matches) {
+          const swiper = new Swiper(".swiper", {
+            // Optional parameters
+            direction: "horizontal",
+            freeMode: true,
+
+            // If we need pagination
+            pagination: {
+              el: ".swiper-pagination",
+            },
+          });
+        }
+      });
+    </script>
+    <script>
+      let openSlider = document.getElementById("openSlider");
+      let swiper = document.querySelector(".swiper");
+      let closeSlider = document.querySelector("swiper--open");
+      let textSlider = document.querySelector(".read-text__title");
+      let imageRotate = document.querySelector(".read-text__image");
+      openSlider.addEventListener("click", function () {
+        swiper.classList.toggle("swiper--open");
+
+        if (swiper.classList.contains("swiper--open")) {
+          textSlider.textContent = "Скрыть";
+          imageRotate.classList.add("read-text--rotate");
+        } else {
+          imageRotate.classList.remove("read-text--rotate");
+          textSlider.textContent = "Показать все";
+        }
+      });
+    </script>
+  </body>
+</html>
