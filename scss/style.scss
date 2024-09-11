@@ -291,34 +291,6 @@ a {
   border-radius: 50%;
 }
 
-.swiper {
-  width: 320px;
-  height: 120px;
-  overflow-x: auto;
-  transition-duration: 1s;
-  .swiper-wrapper {
-    padding-top: 16px;
-    gap: 16px;
-  }
-  .swiper-slide {
-    background-color: #fff;
-    border: solid 1px #eaeaea;
-    max-width: 240px;
-    max-height: 72px;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 8px;
-    padding-right: 8px;
-    align-items: center;
-    width: 240px;
-    box-sizing: border-box;
-  }
-}
-.swiper--open {
-  height: 340px;
-  transition-duration: 1s;
-}
-
 .read-text--rotate {
   transform: rotate(180deg);
   transition-duration: 1s;
@@ -326,30 +298,80 @@ a {
 .read-text__image {
   transition-duration: 1s;
 }
+// .swiper-partners {
+//   height: 170px;
+//   .swiper-wrapper {
+//     .swiper-slide {
+//       width: 240px;
+//       height: 72px;
+//     }
+//   }
+// }
+
+.slider-idk {
+  padding-left: 8px;
+  h1 {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    color: $textColorGray;
+  }
+}
+
+.swiper-partners {
+  box-sizing: border-box;
+  min-width: 320px;
+  max-width: 1120px;
+  height: 120px;
+  transition-duration: 1s;
+
+  .swiper-wrapper {
+    padding-top: 16px;
+    gap: 16px;
+  }
+
+  .swiper-slide {
+    background-color: #fff;
+    border: solid 1px #eaeaea;
+    max-width: 240px;
+    max-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    box-sizing: border-box;
+    padding: 8px;
+  }
+}
 
 @media (min-width: 768px) {
-  .swiper {
-    height: 160px;
-    width: 768px;
-    .swiper-wrapper {
-      box-sizing: border-box;
-      flex-wrap: wrap;
-      gap: 16px 24px;
-      padding-top: 0;
-    }
-    .swiper-pagination {
-      display: none;
-    }
-  }
-  .swiper--open {
-    height: 340px;
-  }
   .read-text--rotate {
     transform: rotate(180deg);
     transition-duration: 1s;
   }
+  .swiper-pagination {
+    display: none;
+  }
+  .slider-idk {
+    display: flex;
+    flex-direction: column;
+    max-width: 1120px;
+    gap: 16px;
+  }
+  .swiper-partners {
+    height: 180px;
+    .swiper-wrapper {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
   #openSlider {
     display: flex;
+  }
+  .swiper--open {
+    height: 290px;
+    transition-duration: 1s;
   }
 
   .nav-mobile {
@@ -392,12 +414,6 @@ a {
 }
 
 @media (min-width: 1440px) {
-  .swiper {
-    width: 1040px;
-  }
-  .swiper--open {
-    height: 250px;
-  }
   .nav-mobile {
     display: none;
   }
