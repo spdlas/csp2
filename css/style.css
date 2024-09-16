@@ -103,7 +103,8 @@ a {
   opacity: 0.8;
 }
 
-#openSlider {
+#openSlider,
+#openSliderTech {
   display: none;
 }
 
@@ -307,22 +308,59 @@ a {
 
 .read-text--rotate {
   transform: rotate(180deg);
-  transition-duration: 1s;
+  transition-duration: 0.4s;
 }
 
 .read-text__image {
-  transition-duration: 1s;
+  transition-duration: 0.4s;
 }
 
 .slider-idk {
   padding-left: 8px;
 }
-.slider-idk h1 {
+.slider-idk h2 {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.200000003px;
   text-align: left;
   color: #7e7e82;
+  display: block;
+  border-top: solid rgb(217, 255, 245) 1px;
+  background-image: linear-gradient(to right, rgb(248, 248, 248), rgb(255, 255, 255));
+}
+
+.swiper-tech {
+  box-sizing: border-box;
+  min-width: 320px;
+  max-width: 1120px;
+  height: 120px;
+  transition-duration: 0.4s;
+}
+.swiper-tech .swiper-wrapper {
+  padding-top: 16px;
+  gap: 16px;
+}
+.swiper-tech .swiper-slide {
+  background-color: #fff;
+  border: solid 1px #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 240px;
+  height: 160px;
+  box-sizing: border-box;
+  padding: 8px;
+  position: relative;
+}
+.swiper-tech .swiper-slide .swiper-item__title {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.swiper-tech .swiper-slide .button-swiper {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
 }
 
 .swiper-partners {
@@ -330,7 +368,7 @@ a {
   min-width: 320px;
   max-width: 1120px;
   height: 120px;
-  transition-duration: 1s;
+  transition-duration: 0.4s;
 }
 .swiper-partners .swiper-wrapper {
   padding-top: 16px;
@@ -352,7 +390,7 @@ a {
 @media (min-width: 768px) {
   .read-text--rotate {
     transform: rotate(180deg);
-    transition-duration: 1s;
+    transition-duration: 0.4s;
   }
   .swiper-pagination {
     display: none;
@@ -370,12 +408,24 @@ a {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
-  #openSlider {
+  .swiper-tech {
+    height: 180px;
+  }
+  .swiper-tech .swiper-wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  #openSlider,
+  #openSliderTech {
     display: flex;
   }
   .swiper--open {
-    height: 290px;
-    transition-duration: 1s;
+    height: 360px;
+    transition-duration: 0.4s;
+  }
+  .swiper-tech--open {
+    height: 560px;
+    transition-duration: 0.4s;
   }
   .nav-mobile {
     justify-content: space-between;
@@ -425,6 +475,10 @@ a {
   }
 }
 @media (min-width: 1440px) {
+  .swiper--open {
+    height: 280px;
+    transition-duration: 0.4s;
+  }
   .nav-mobile {
     display: none;
   }
