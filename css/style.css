@@ -316,6 +316,7 @@ a {
 }
 
 .slider-idk {
+  display: block;
   padding-left: 8px;
 }
 .slider-idk h2 {
@@ -333,7 +334,7 @@ a {
   box-sizing: border-box;
   min-width: 320px;
   max-width: 1120px;
-  height: 120px;
+  height: 210px;
   transition-duration: 0.4s;
 }
 .swiper-tech .swiper-wrapper {
@@ -387,6 +388,30 @@ a {
   padding: 8px;
 }
 
+.swiper-price {
+  box-sizing: border-box;
+  min-width: 320px;
+  max-width: 1120px;
+  height: 120px;
+  transition-duration: 0.4s;
+}
+.swiper-price .swiper-wrapper {
+  padding-top: 16px;
+  gap: 16px;
+}
+.swiper-price .swiper-slide {
+  background-color: #fff;
+  border: solid 1px #eaeaea;
+  max-width: 240px;
+  max-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
 @media (min-width: 768px) {
   .read-text--rotate {
     transform: rotate(180deg);
@@ -398,11 +423,11 @@ a {
   .slider-idk {
     display: flex;
     flex-direction: column;
-    max-width: 1120px;
     gap: 16px;
   }
   .swiper-partners {
     height: 180px;
+    margin: 0;
   }
   .swiper-partners .swiper-wrapper {
     flex-wrap: wrap;
@@ -410,6 +435,7 @@ a {
   }
   .swiper-tech {
     height: 180px;
+    margin: 0;
   }
   .swiper-tech .swiper-wrapper {
     flex-wrap: wrap;

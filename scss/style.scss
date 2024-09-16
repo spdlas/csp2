@@ -301,6 +301,7 @@ a {
 }
 
 .slider-idk {
+  display: block;
   padding-left: 8px;
   h2 {
     font-size: 16px;
@@ -322,7 +323,7 @@ a {
   box-sizing: border-box;
   min-width: 320px;
   max-width: 1120px;
-  height: 120px;
+  height: 210px;
   transition-duration: 0.4s;
 
   .swiper-wrapper {
@@ -380,6 +381,32 @@ a {
   }
 }
 
+.swiper-price {
+  box-sizing: border-box;
+  min-width: 320px;
+  max-width: 1120px;
+  height: 120px;
+  transition-duration: 0.4s;
+
+  .swiper-wrapper {
+    padding-top: 16px;
+    gap: 16px;
+  }
+
+  .swiper-slide {
+    background-color: #fff;
+    border: solid 1px #eaeaea;
+    max-width: 240px;
+    max-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    box-sizing: border-box;
+    padding: 8px;
+  }
+}
+
 @media (min-width: 768px) {
   .read-text--rotate {
     transform: rotate(180deg);
@@ -391,11 +418,11 @@ a {
   .slider-idk {
     display: flex;
     flex-direction: column;
-    max-width: 1120px;
     gap: 16px;
   }
   .swiper-partners {
     height: 180px;
+    margin: 0;
     .swiper-wrapper {
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -403,6 +430,7 @@ a {
   }
   .swiper-tech {
     height: 180px;
+    margin: 0;
     .swiper-wrapper {
       flex-wrap: wrap;
       justify-content: flex-start;

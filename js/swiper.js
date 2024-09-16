@@ -11,10 +11,6 @@ function initSwiper() {
         clickable: true,
       },
     });
-  } else {
-    const swiper = new Swiper(".swiper", {
-      spaceBetween: 0,
-    });
   }
 }
 
